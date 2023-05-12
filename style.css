@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-paragraph:'Palanquin', sans-serif;
+  --ff-body:'Staatliches', cursive;
+  --bd-page: hsla(233, 100%, 97%, 1);
+  --bd-header: hsla(218, 17%, 62%, 1);
+}
+
+body {
+  font-family: var(--ff-body);
+  font-size: 1.6rem;
+}
+
+.page {
+  max-width: 38.4rem;
+  margin: 0 auto;
+
+  background: var(--bd-page);
+}
+
+header {
+  padding: 3.2rem 0;
+  background: var(--bd-header);
+  color: #FFFFFF;
+
+  text-align: center;
+}
+
+header img {
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+
+header .title {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  padding: 0.8rem 0;
+
+  background: #CBC0D3;
+}
+
+header h2 {
+  margin: auto 8.5rem;
+
+  font-size: 4rem;
+  line-height: 3.4rem;
+  color: #FFFFFF;
+
+  letter-spacing: 0.05em;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+main {
+  display: grid;
+  gap: 3.2rem;
+
+  padding: 1.4rem 3.2rem;
+}
+
+main p {
+  font-family: var(--ff-paragraph);
+  font-size: 2rem;
+  line-height: 1.8rem;
+
+  text-align: center;
+
+  color: #23053A;
+
+  margin-bottom: 6.3rem;
+}
+
+.card {
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+
+  border-radius: 2rem;
+
+  animation: downtop 500ms;
+}
+
+.card h2 {
+  position: absolute;
+  top: 1.6rem;
+  left: 19.2rem;
+
+  color: #4A4E69;
+}
+
+.card h2 span {
+  border-radius: 2rem;
+  background-color: #FEEAFA;
+  font-size: 2rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+
+  padding: 0 2.4rem;
+
+  width: fit-content;
+  height: 3.4rem;
+
+  display:inline-flex;
+  align-items: center; 
+
+  animation: topdown 3000ms;
+}
+
+@keyframes topdown{
+  0%{
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downtop{
+
+  0%{
+    opacity: 0;
+    transform:  translateY(20px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
